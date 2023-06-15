@@ -10,12 +10,14 @@
 import json
 import requests
 
-import matplotlib.pyplot as plt  
+import matplotlib.pyplot as plt
+
 
 def extract(url):
     response = requests.get(url)
     data = response.json()
     return data
+
 
 def filtro(data):
     titulos= []
@@ -23,6 +25,7 @@ def filtro(data):
         lista= [x for x in range (200) if (data[x].get("completed") == True and data[x].get("userId") == y)]
         titulos.append(len(lista))
     return titulos
+
 
 def bar_plot(titulos):
     usuarios = [str(x) for x in range(1,11)]
@@ -35,7 +38,6 @@ def bar_plot(titulos):
     ax.set_xlabel("Usuario")
     ax.legend()
     plt.show()
-
 
 
 if __name__ == '__main__':
@@ -74,4 +76,5 @@ if __name__ == '__main__':
     data = extract(url)
     titulos = filtro(data) 
     bar_plot(titulos)
+    
     print("terminamos")
