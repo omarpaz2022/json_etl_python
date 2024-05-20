@@ -19,7 +19,8 @@ def serializar():
 
     # Debe armar un JSON que tenga como datos
     # nombre, apellido, DNI
-    # Dentro debe tener una lista donde coloque cantidad de elementos de vestir
+    # Dentro debe tener una lista donde coloque cantidad de elementos de 
+    # Vestir
     # ejemplo -->
     #  { "prenda": "zapatilla", "cantidad": 4 }
     #  { "prenda": "remeras", "cantidad": 12 }
